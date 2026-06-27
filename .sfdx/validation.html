@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        form{
+            margin-top: 10px;
+            width:250px;
+            margin-left:30px;
+        }
+        input{
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left:20px;
+            margin-top:5px;
+        }
+        select{
+          margin-left:20px;
+            margin-top:10px;
+        }
+        textarea{
+             display:block;
+             margin-top:10px;
+             margin-left:20px;
+        }
+        small{
+            color:red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input id="name" type="text" placeholder="Name" pattern="[a-z]{3,8}" title="3 to 8 length of lower case letter only" required >
+        <small id="nm">Name should be minimum of three characters</small>
+        <input type="email" placeholder="email">
+        <input type="number" placeholder="age">
+        <input type="password" placeholder="Strong Password">
+        <select>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <textarea>Tell Us About You...</textarea>
+        <input type="submit">
+    </form>
+    <script src="validation.js"></script>
+</body>
+</html>

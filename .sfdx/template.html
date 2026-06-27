@@ -1,0 +1,15 @@
+<template>
+   <template if:true={accounts.data}>
+        <template for:each={accounts.data} for:item="acc">
+            <p key={acc.id}>{acc.name}</p>
+        </template>
+   </template>
+</template>
+
+
+public with sharing class AccountControkker{
+    AauraEnabled(Cacheable=true)
+    public static void getAccounts(){
+
+    }
+}

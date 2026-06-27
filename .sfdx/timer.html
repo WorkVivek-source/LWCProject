@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Box</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            width:100%;
+            height:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background-color:#222;
+            font-family: Arial, sans-serif;
+        }
+
+        #container{
+            border-radius: 10px;
+            background-color:#333;
+            width:300px;
+            height:200px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            gap:10px;
+        }
+
+        #down{
+            color:white;
+            font-size:14px;
+        }
+
+        /* Progress Bar Background */
+        #progressBox{
+            width:80%;
+            height:10px;
+            background-color:#555;
+            border-radius:10px;
+            overflow:hidden;
+        }
+
+        /* Actual Progress */
+        #progress{
+            width:0%;
+            height:100%;
+            background-color:white;
+            transition: width 0.3s ease;
+        }
+
+        /* Percentage Text */
+        #percent{
+            color:white;
+            font-size:12px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="down">Downloading...</div>
+
+        <div id="progressBox">
+            <div id="progress"></div>
+        </div>
+
+        <div id="percent">0%</div>
+    </div>
+
+    <script src="timer.js"></script>
+</body>
+</html>
